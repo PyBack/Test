@@ -92,6 +92,12 @@ Private Lenders 들은 owner 들과 함께 보다 적극적으로 borrower 들�
 
 ### 활동성 및 파이프라인
 - 개별 Deal 의 상세 조건 (Industry, Business Description, Region EV, xEBITDA, Rev, Instrument, Owner, Mandate, 진행 상태)
+- Seniority and Ranking
+    - Senior Secured (1st Lien)
+    - 2nd Lien
+    - Senior Unsecured (High Yield)
+    - Mezzanine (Loan)
+    - Sub. Unsec./PIK (High Yield) 
     
 
     
