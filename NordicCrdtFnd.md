@@ -91,7 +91,7 @@ Private Lenders 들은 owner 들과 함께 보다 적극적으로 borrower 들�
 - 나머지는 지배권을 위한 투자 혹은 공동투자
 
 ### 활동성 및 파이프라인
-- ?
+- 개별 Deal 의 상세 조건 (Industry, Business Description, Region EV, xEBITDA, Rev, Instrument, Owner, Mandate, 진행 상태)
     
 
     
