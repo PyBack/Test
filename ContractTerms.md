@@ -33,15 +33,15 @@
   - rule 판단 
   - consent 동의
 
-## 5. Termination 계약의 헤제
+## 5. Termination (계약의 헤제)
   
-## 6. Indemnifications 면책
+## 6. Indemnifications (면책)
 
-## 7. Closing Coniditons 종결조건 / Condition Precedent 선행조건
-## 8. Representations and Warranties 진술 및 보증 
-## 9. Covenants 확약사항
+## 7. Closing Coniditons (종결조건) / Condition Precedent (선행조건)
+## 8. Representations and Warranties (진술 및 보증) 
+## 9. Covenants (확약사항)
 계약당사자에게 작위의무/부작위의무를 부여하는 것. 계속적 의무를 부과하기도 함. 확약을 위반할 경우 손해배상청구나 이행청구가 가능
-## 10. Miscellaneous 기타조항
+## 10. Miscellaneous (기타조항)
 
   - 완전합의 entire agreement
   최종 합의 내용을 반영하였고 이전에 있던 계약에 우선한다는 취지
