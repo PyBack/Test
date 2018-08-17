@@ -57,14 +57,14 @@ Bloodfen Raptor 카드 구현
 
 
 ## git folk 버전 최신 업데이트
-git remote -v
+- git remote -v
 - git remote remove upstream (upstream 주소 업데이트 할려면 기존에 있던 remote branch 삭제)
 - git remote add upstream https://github.com/utilForever/Hearthstonepp.git
-git fetch upstream
-git checkout master
-git merge upstream/master
-git log --graph --decorate --oneline
-git push origin master (github 에 push)
+- git fetch upstream
+- git checkout master
+- git merge upstream/master
+- git log --graph --decorate --oneline
+- git push origin master (github 에 push)
 
 
 ## git GUI Tool 
@@ -78,7 +78,7 @@ git push origin master (github 에 push)
 ## 저장소에 추적하지 않아야 하는 파일이 추가된 경우, 
 하지만 작업공간에서 파일이 삭제되면 안되는 경우에 아래의 명령을 사용하면 
 저장소에서는 파일이 삭제되지만 내 작업공간에는 파일이 남아 있게 된다.
- --cached 옵션없이 사용하면 내 작업공간의 파일도 같이 삭제한다.
+ "--cached" 옵션없이 사용하면 내 작업공간의 파일도 같이 삭제한다.
 $ git rm --cached filename
 
 ## Git commit, add, pull, merge 취소하기
