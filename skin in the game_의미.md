@@ -30,3 +30,8 @@ PE Buyer 가 갑이었던 과거에는 '자금조달이 안되면 우린 거래 
 ## skin in the game
 
 "승부의 책임"이라는 단어로 번역이 적절하며 게임에 임하면서 발생되는 비용과 결과 등에 대한 책임을 져야 한다는 것을 비유로 든 용어. 대출금의 상환 불능 때 생기는 신용리스크를 뜻한다.
+
+
+참고
+- https://m.blog.naver.com/PostView.nhn?blogId=phoonie&logNo=220366754316&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+- http://news.einfomax.co.kr/news/articleView.html?idxno=319804
