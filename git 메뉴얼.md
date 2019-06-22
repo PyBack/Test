@@ -8,6 +8,10 @@
 5. 다운 받을 빈 폴더 설정
 6. 실행
 
+## git에서 특정 브랜치만 clone하는 방법
+git clone -b {branch_name} --single-branch {저장소 URL}  
+ex) git clone -b javajigi --single-branch https://github.com/javajigi/java-racingcar  
+
 ## git 리모트 저장소에 push 하기
 $ git push origin master
 
