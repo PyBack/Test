@@ -34,18 +34,18 @@ $ git push -u origin feature_branch_name
 $ git push origin master --force
 
 ## git 저장소 병합
-git remote add other /path/to/XXX
-git fetch other
-git checkout -b TEMP other/master
-mkdir ZZZ
-git mv stuff ZZZ/stuff # repeat as necessary for each file/dir
-git commit -m "Moved stuff to ZZZ"
-git checkout master
-git merge TEMP --allow-unrelated-histories # should add ZZZ/ to master
-git commit
-git remote rm other
-git branch -d TEMP # to get rid of the extra branch before pushing
-git push # if you have a remote, that is
+git remote add other /path/to/XXX  
+git fetch other  
+git checkout -b TEMP other/master  
+mkdir ZZZ  
+git mv stuff ZZZ/stuff # repeat as necessary for each file/dir  
+git commit -m "Moved stuff to ZZZ"  
+git checkout master  
+git merge TEMP --allow-unrelated-histories # should add ZZZ/ to master  
+git commit  
+git remote rm other  
+git branch -d TEMP # to get rid of the extra branch before pushing  
+git push # if you have a remote, that is  
 
 ## git 리모트 브랜치 삭제
 git 에서 remote branch delete 하는 방법.
