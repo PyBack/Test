@@ -12,7 +12,7 @@
 $ git push origin master
 
 ## 신규 local repository 를 github 에 업로드 하기
-$ git remote add origin remote $URL (https://github.com/QuantTraderEd/$repo_name))
+$ git remote add origin remote $URL (https://github.com/$username/$repo_name))
 $ git push -u origin master
 
 ## git 신규 branch remote 저장소에 push 하기
