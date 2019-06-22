@@ -62,3 +62,9 @@ $ git push origin --delete feature/TEST-860
 $ git branch -d feature/TEST-860
 $ git push origin feature/TEST-860
 
+## commit 취소 명령어 예제
+$ git reset HEAD^ : 최종 커밋 취소. 그러나 변경된 파일은 남아있다.
+$ git reset --hard HEAD^ : 최종 커밋 취소하고 파일 까지 복구한다.
+$ git reset HEAD~n : 마지막 n개의 커밋을 취소 한다. 그러나 변경된 파일은 남아 있다. ( n : 숫자 )
+$ git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 복구됨.
+
