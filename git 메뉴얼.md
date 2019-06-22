@@ -48,7 +48,7 @@ git branch -d TEMP # to get rid of the extra branch before pushing
 git push # if you have a remote, that is  
 
 ## git 리모트 브랜치 삭제
-git 에서 remote branch delete 하는 방법.
+git 에서 remote branch delete 하는 방법.  
 삭제할 브랜치 이름은 feature/TEST-860 이다
  
 ### 방법 1
