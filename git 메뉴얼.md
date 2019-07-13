@@ -27,9 +27,6 @@ $ git checkout -b feature_branch_name
 3. Push your branch to the remote repository:
 $ git push -u origin feature_branch_name
 
-## 특정 로컬 branch 삭제
-$ git branch -D <BRANCH NAME>
-
 ## pull request 후 review 결과 반영하여 commit 하기
 1. Edit for review result
 2. $ git add .
@@ -63,8 +60,11 @@ git 에서 remote branch delete 하는 방법.
 $ git push origin --delete feature/TEST-860
 
 ### 방법 2
-$ git branch -d feature/TEST-860
+$ git branch -d feature/TEST-860  <br/>
 $ git push origin feature/TEST-860
+
+## 특정 로컬 branch 삭제
+$ git branch -D <BRANCH NAME>
 
 ## commit 취소 명령어 예제
 $ git reset HEAD^ : 최종 커밋 취소. 그러나 변경된 파일은 남아있다.  
