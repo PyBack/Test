@@ -14,6 +14,7 @@ ex) git clone -b javajigi --single-branch https://github.com/javajigi/java-racin
 
 ## git 리모트 저장소에 push 하기
 $ git push origin master
+$ git push -u origin <REPOSITORY NAME>  // 특정 remote 레포지터리에 push
 
 ## 신규 local repository 를 github 에 업로드 하기
 $ git remote add origin remote $URL (https://github.com/$username/$repo_name))  
@@ -25,6 +26,9 @@ $ git checkout -b feature_branch_name
 2. Edit, add and commit your files.
 3. Push your branch to the remote repository:
 $ git push -u origin feature_branch_name
+
+## 특정 로컬 branch 삭제
+$ git branch -D <BRANCH NAME>
 
 ## pull request 후 review 결과 반영하여 commit 하기
 1. Edit for review result
