@@ -10,21 +10,21 @@
 
 ## git에서 특정 브랜치만 clone하는 방법
 git clone -b {branch_name} --single-branch {저장소 URL}  
-ex) git clone -b javajigi --single-branch https://github.com/javajigi/java-racingcar  
+ex) git clone -b test --single-branch https://github.com/pyback/test.git  
 
 ## git 리모트 저장소에 push 하기
 $ git push origin master
-$ git push -u origin <REPOSITORY NAME>  // 특정 remote 레포지터리에 push
+$ git push -u origin {repositary_name}  // 특정 remote 레포지터리에 push
 
 ## 신규 local repository 를 github 에 업로드 하기
-$ git remote add origin remote $URL (https://github.com/$username/$repo_name))  
+$ git remote add origin remote {URL} (https://github.com/$username/$repo_name))  
 $ git push -u origin master
 
 ## git 신규 branch remote 저장소에 push 하기
-1. Create a new branch:
-$ git checkout -b feature_branch_name
-2. Edit, add and commit your files.
-3. Push your branch to the remote repository:
+1. Create a new branch:  
+$ git checkout -b feature_branch_name  
+2. Edit, add and commit your files.  
+3. Push your branch to the remote repository: <br/>
 $ git push -u origin feature_branch_name
 
 ## pull request 후 review 결과 반영하여 commit 하기
@@ -34,8 +34,8 @@ $ git push -u origin feature_branch_name
 4. $ git push origin HEAD
 
 ## 로컬에서 reset 한경우 강제로 push remote 하기
-애러 메세지가 아래 처럼 뜨는 경우
-(Git push failed, To prevent from losing history, non-fast forward updates were rejected.)
+애러 메세지가 아래 처럼 뜨는 경우  
+(Git push failed, To prevent from losing history, non-fast forward updates were rejected.)  
 $ git push origin master --force
 
 ## git 저장소 병합
@@ -64,7 +64,7 @@ $ git branch -d feature/TEST-860  <br/>
 $ git push origin feature/TEST-860
 
 ## 특정 로컬 branch 삭제
-$ git branch -D <BRANCH NAME>
+$ git branch -D {branch_name}
 
 ## commit 취소 명령어 예제
 $ git reset HEAD^ : 최종 커밋 취소. 그러나 변경된 파일은 남아있다.  
@@ -76,7 +76,7 @@ $ git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 �
 1. 먼저 원격의 브랜치에 접근하기 위해 git remote를 갱신해줄 필요가 있다. ($ git remote update)
 2. 원격 저장소 branch 확인 ($ git branch -r)
 3. 로컬, 원격 저장소 branch 확인 ($ git branch -a)
-4. 원격 저장소의 branch 가져오기 ($ git checkout -t origin/$
+4. 원격 저장소의 branch 가져오기 ($ git checkout -t origin/$BRANCH_NAME
 
 ## git log 옵션
 [alias]  <br/>
