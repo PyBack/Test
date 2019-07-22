@@ -71,6 +71,7 @@ $ git reset HEAD^ : 최종 커밋 취소. 그러나 변경된 파일은 남아�
 $ git reset --hard HEAD^ : 최종 커밋 취소하고 파일 까지 복구한다.  
 $ git reset HEAD~n : 마지막 n개의 커밋을 취소 한다. 그러나 변경된 파일은 남아 있다. ( n : 숫자 )  
 $ git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 복구됨.  
+$ git commit --amend : commit 메세지 변경하기
 
 ## Git remote branch 가져오기
 1. 먼저 원격의 브랜치에 접근하기 위해 git remote를 갱신해줄 필요가 있다. ($ git remote update)
