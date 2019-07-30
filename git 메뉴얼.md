@@ -13,12 +13,16 @@ git clone -b {branch_name} --single-branch {저장소 URL}
 ex) git clone -b test --single-branch https://github.com/pyback/test.git  
 
 ## git 리모트 저장소에 push 하기
+```sh
 $ git push origin master
 $ git push -u origin {repositary_name}  // 특정 remote 레포지터리에 push
+```
 
 ## 신규 local repository 를 github 에 업로드 하기
+```sh
 $ git remote add origin remote {URL} (https://github.com/$username/$repo_name))  
 $ git push -u origin master
+```
 
 ## git 신규 branch remote 저장소에 push 하기
 1. Create a new branch:  
@@ -57,21 +61,29 @@ git 에서 remote branch delete 하는 방법.
 삭제할 브랜치 이름은 feature/TEST-860 이다
  
 ### 방법 1
+```sh
 $ git push origin --delete feature/TEST-860
+```
 
 ### 방법 2
+```sh
 $ git branch -d feature/TEST-860  <br/>
 $ git push origin feature/TEST-860
+```
 
 ## 특정 로컬 branch 삭제
+```sh
 $ git branch -D {branch_name}
+```
 
 ## commit 취소 명령어 예제
+```sh
 $ git reset HEAD^ : 최종 커밋 취소. 그러나 변경된 파일은 남아있다.  
 $ git reset --hard HEAD^ : 최종 커밋 취소하고 파일 까지 복구한다.  
 $ git reset HEAD~n : 마지막 n개의 커밋을 취소 한다. 그러나 변경된 파일은 남아 있다. ( n : 숫자 )  
 $ git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 복구됨.  
 $ git commit --amend : commit 메세지 변경하기
+```
 
 ## Git remote branch 가져오기
 1. 먼저 원격의 브랜치에 접근하기 위해 git remote를 갱신해줄 필요가 있다. ($ git remote update)
