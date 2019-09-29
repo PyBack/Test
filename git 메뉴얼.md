@@ -75,6 +75,12 @@ $ git push origin feature/TEST-860
 ```sh
 $ git branch -D {branch_name}
 ```
+## git add 옵션
+```sh
+$ git add -A  : stages all changes
+$ git add .   : stages new files and modifications, without deletions
+$ git add -u  : stages modifications and deletions, without new files
+```
 
 ## commit 취소 명령어 예제
 ```sh
