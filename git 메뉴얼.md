@@ -105,3 +105,12 @@ lg = !"git lg1"  <br/>
 ```sh
 $ git log --pretty=format:'%h %ad %s' --date=short  --graph : 해시코드 날짜 커밋내용 + 그래프
 ```
+## github invalid username n password, general token 설정
+git push를 했을 때 다음과 같은 오류가 발생했을 때 해결 방법
+
+```sh
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/
+```
+
+https://sosoeasy.tistory.com/536
