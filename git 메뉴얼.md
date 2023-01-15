@@ -91,6 +91,12 @@ $ git reset --hard HEAD~n : 마지막 n개의 커밋을 취소. 파일 또한 �
 $ git commit --amend : commit 메세지 변경하기
 ```
 
+## commit 변경 사항 추가 방법
+1. 변경사항 A 커밋!
+2. 미처 포함시키지 못한 변경사항 AA 발견!
+3. git add AA
+4. git commit -C HEAD --amend
+
 ## Git remote branch 가져오기
 1. 먼저 원격의 브랜치에 접근하기 위해 git remote를 갱신해줄 필요가 있다. ($ git remote update)
 2. 원격 저장소 branch 확인 ($ git branch -r)
