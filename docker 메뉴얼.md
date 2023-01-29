@@ -77,4 +77,13 @@ mysql> show databases;
 4 rows in set (0.01 sec)
 ```
 
+## 2. Docker Container 에 볼륨 설정하기
+
+볼륨 리스트 확인 하기
+```sh
+$  docker volume list
+DRIVER    VOLUME NAME
+local     b97c5432ff0a86802d2cbca69484448f1ecd5c530ddcad7e4b7eea3c6ec2e8c5
+```
+
 참고 사이트: https://poiemaweb.com/docker-mysql
