@@ -75,6 +75,12 @@ mysql> show databases;
 | sys                |
 +--------------------+
 4 rows in set (0.01 sec)
+
+mysql> USE mysql;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
 ```
 
 ## 2. Docker Container 에 볼륨 설정하기
