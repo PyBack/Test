@@ -92,6 +92,55 @@ DRIVER    VOLUME NAME
 local     b97c5432ff0a86802d2cbca69484448f1ecd5c530ddcad7e4b7eea3c6ec2e8c5
 ```
 
+## 3. Docker 를 사용하여 Flask REST API 서버 이미지 생성 및 컨테이너 실행
+
+### 3-1. Docker 이미지 생성
+``` sh
+$ docker (image) build -t {이미지이름} .
+```
+1. -t (--tag) 옵션은 이미지명과 태그명을 붙이는 것 실제 사용에서 거의 필수
+2. 도커파일 경로에서 "."은 현재 작업 디렉터리
+3. -f 옵션은 기본인 Dockerfile 대신에 다른 파일 명을 사용할 경우 사용
+``` sh
+$ docker (image) build {이미지이름} -f Dockerfile-test  -t exmaple/echo:latest
+```
+4. --pull 옵션은 매번 베이스 이미지를 강제로 새로 받아옴
+``` sh
+$ docker (image) build {이미지이름} --pull=true -t exmaple/echo:latest
+```
+
+### 3-2. Docker 이미지 컨테이너 실행
+기본 명령어
+``` sh
+$ docker (container) run {이미지이름}:{버전}
+```
+
+1 -d 옵션
+	서버프로그램을 run 시키면 해당 쉘이 서버 로그창으로 바뀜
+	그러지 않게 하기 위해 백그라운드(daemon)으로 컨테이너를 실행시킨다는 옵션
+2 -p 옵션
+	포트 포워딩 지정
+	<호스트 포트>:<컨터에너포트>
+	호스트포트는 중복되면 안됨
+3 -i 옵션
+	컨테이너 쪽 쉘에 들어가서 명령 실행할 수 있는 입력이 되게끔 함
+4 -t 옵션
+	터미널 기능 활성화
+	주로 -it 옵션이 함께 자주 사용
+5 -v 옵션
+	볼륨 마운트 이용시 사용
+6 --name 옵션
+	컨테이너의 이름을 지정해줌
+	--name <이름> 옵션과 붙여서 사용
+7 --rm 옵션
+	컨테이너를  stop 시키는 동시에 삭제까지 한번에 실행
+
+예시)
+``` sh
+$ docker container run -it --name backend-test-docker -d -p 5050:5000 backend-test:latest
+```
+
+
 참고 사이트:   
 [docker mysql 컨터에너 생성](https://poiemaweb.com/docker-mysql)  
 [mysql container에 볼륨 설정하기](https://velog.io/@june20516/mysql-dockerize2-mysql-container%EC%97%90-%EB%B3%BC%EB%A5%A8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)  
