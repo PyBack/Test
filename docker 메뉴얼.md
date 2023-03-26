@@ -144,3 +144,4 @@ $ docker container run -it --name backend-test-docker -d -p 5050:5000 backend-te
 참고 사이트:   
 [docker mysql 컨터에너 생성](https://poiemaweb.com/docker-mysql)  
 [mysql container에 볼륨 설정하기](https://velog.io/@june20516/mysql-dockerize2-mysql-container%EC%97%90-%EB%B3%BC%EB%A5%A8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)  
+[docker 이미지 빌드와 컨테이너 실행](https://conanglog.tistory.com/69)  
