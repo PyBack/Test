@@ -96,17 +96,17 @@ local     b97c5432ff0a86802d2cbca69484448f1ecd5c530ddcad7e4b7eea3c6ec2e8c5
 
 ### 3-1. Docker 이미지 생성
 ``` sh
-$ docker (image) build -t {이미지이름} .
+$ docker (image) build -t {이미지이름} ./
 ```
 1. -t (--tag) 옵션은 이미지명과 태그명을 붙이는 것 실제 사용에서 거의 필수
 2. 도커파일 경로에서 "."은 현재 작업 디렉터리
 3. -f 옵션은 기본인 Dockerfile 대신에 다른 파일 명을 사용할 경우 사용
 ``` sh
-$ docker (image) build {이미지이름} -f Dockerfile-test  -t exmaple/echo:latest
+$ docker (image) build {이미지이름} -f Dockerfile-test  -t exmaple/echo:latest ./
 ```
 4. --pull 옵션은 매번 베이스 이미지를 강제로 새로 받아옴
 ``` sh
-$ docker (image) build {이미지이름} --pull=true -t exmaple/echo:latest
+$ docker (image) build {이미지이름} --pull=true -t exmaple/echo:latest ./
 ```
 
 ### 3-2. Docker 이미지 컨테이너 실행
