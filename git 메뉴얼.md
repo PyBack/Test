@@ -109,6 +109,30 @@ $ git checkout . : 변경된 파일 복구, 추가된 파일 삭제, 최종 커�
 3. 로컬, 원격 저장소 branch 확인 ($ git branch -a)
 4. 원격 저장소의 branch 가져오기 ($ git checkout -t origin/$BRANCH_NAME
 
+## git tracked 파일/폴더 untracked 로 변환하기
+기존의 git의 관리를 받고 있던(commit된 것들) 파일이나 폴더를 .gitignore 파일에 작성하고  
+add > commit > push 하여도  ignore(무시) 되지 않음  
+기존에 가지고 있는 cached를 삭제해야함  
+  
+### 1.  Git 에서 파일 or 폴더 삭제하기 
+git rm --cache 명령어는 Staging Area(add 를 하고나서의 영역)에서 파일을 제거하고 working directory(Local)에서는 파일을 유지하는 명령어
+```sh
+$ git rm --cached {삭제할파일}
+$ git rm -r --cached {삭제할폴더}
+ex) $ git rm -r --cached .vscode
+```
+
+### 2. .gitignore 파일에 해당 폴더 추가하기 
+### 3. 변경 내역 Commit 하기
+```sh
+ex) $ git commit -m "untrack .vscode & apply .gitignore"
+```
+### 5. 원격 저장소 에 반영 
+```sh
+$ git push origin {branch_name}
+```
+
+
 ## git log 옵션
 [alias]  <br/>
 lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all  <br/>
