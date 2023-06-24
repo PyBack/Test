@@ -132,6 +132,40 @@ ex) $ git commit -m "untrack .vscode & apply .gitignore"
 $ git push origin {branch_name}
 ```
 
+## Git Submodule 사용 방법
+
+### 1. Submodule이 포함된 레파지토리 clone
+서브모듈을 포함하는 프로젝트를 일반적으로 클론하면, 서브모듈 디렉토리는 빈 디렉토리가 된다.   
+**메인 프로젝트 입장에서 서브모듈은 사실 단지 현재 가리키는 커밋과 변경 여부만 적혀있는 하나의 파일에 불과** 하기 때문이다.  
+기본적으로 서브모듈은 다른 레파지토리이기 때문에 해당 빈 디텍토리에 가서 clone 을 하면 된다.  
+```sh
+$ cd {submodule-folder}
+$ git clone -b {branch_name} https://github.com/{sub-respository}.git
+```
+  
+좀더 엄일한 초기화 방법은 아래와 같다  
+```sh
+$ git submodule init
+$ git submodule update
+```
+git submodule init 은 서브모듈 디렉터리를 git 로컬 저장소로 초기화 해주고(git init 처럼)
+git submodule update 는 각 브랜치와 HEAD 정보 및 커밋 내역을 가져온다. 
+  
+더 편한 방법은 --recurse-submodules 옵션을 사용하여 클론해야 서브모듈을 자동으로 함께 가져온다.
+```sh
+$ git clone --recurse-submodules https://github.com/{super-repository}.git
+```
+
+### 2. Submodule 변경 사항 업데이트
+```sh
+$ cd {submodule-folder}
+$ git pull origin develop
+```
+  
+참조 
+https://hudi.blog/git-submodule/  
+https://sgc109.github.io/2020/07/16/git-submodule/  
+
 
 ## git log 옵션
 [alias]  <br/>
