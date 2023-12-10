@@ -184,3 +184,27 @@ fatal: Authentication failed for 'https://github.com/
 ```
 
 https://sosoeasy.tistory.com/536
+
+## git config local user 셋팅
+```sh
+$ git init  # 이미 생성되어 있으면 안해도됨
+$ git config --local user.name "your name"
+$ git config --local user.email "your email"
+```
+
+아래와 같은 방법도 가능 한듯 🤔
+
+can confirm that by printing on the terminal:
+```
+    Global user:git config --global user.name
+    Local user: git config user.name
+```
+
+혹은
+
+...or just edit the .git\config file and add these three lines somewhere:
+```
+[user]
+    name = YourName
+    email = your@email.com
+```
