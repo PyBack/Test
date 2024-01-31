@@ -1,10 +1,20 @@
 from sqlalchemy import create_engine
 import pandas as pd
 
+mysql_user_name = ''
+mysql_pw = ''
+mysql_hostname = ''
+
+# url = "mysql+pymysql://[id]:[pw]@[mysql주소]:[port]/[db_name]?charset=utf8"
+url = f"mysql+pymysql://{mysql_user_name}:{mysql_pw}@{mysql_hostname}:{port}/mysql?charset=utf8"
+
 engine = create_engine(
-    "mysql+pymysql://유저 이름:비밀번호@호스트 이름/db 이름",
-        encoding="utf8",
+    url=url,
     )
 conn = engine.connect()
-result_df = pd.read_sql_query(query, conn)
+sql_text = """
+show databases;
+"""
+result_df = pd.read_sql_query(sql_text, conn)
+print(result_df)
 conn.close()
