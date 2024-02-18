@@ -115,29 +115,51 @@ $ docker (image) build {이미지이름} --pull=true -t exmaple/echo:latest ./
 $ docker (container) run {이미지이름}:{버전}
 ```
 
-1 -d 옵션  
-	서버프로그램을 run 시키면 해당 쉘이 서버 로그창으로 바뀜  
-	그러지 않게 하기 위해 백그라운드(daemon)으로 컨테이너를 실행시킨다는 옵션  
-2 -p 옵션  
-	포트 포워딩 지정  
-	<호스트 포트>:<컨터에너포트>  
-	호스트포트는 중복되면 안됨  
-3 -i 옵션  
-	컨테이너 쪽 쉘에 들어가서 명령 실행할 수 있는 입력이 되게끔 함  
-4 -t 옵션  
-	터미널 기능 활성화  
-	주로 -it 옵션이 함께 자주 사용  
-5 -v 옵션  
-	볼륨 마운트 이용시 사용  
-6 --name 옵션  
-	컨테이너의 이름을 지정해줌  
-	--name <이름> 옵션과 붙여서 사용  
-7 --rm 옵션  
-	컨테이너를  stop 시키는 동시에 삭제까지 한번에 실행  
+1. -d 옵션  
+서버프로그램을 run 시키면 해당 쉘이 서버 로그창으로 바뀜  
+그러지 않게 하기 위해 백그라운드(daemon)으로 컨테이너를 실행시킨다는 옵션
+     
+2. -p 옵션  
+포트 포워딩 지정  
+<호스트 포트>:<컨터에너포트>  
+호스트포트는 중복되면 안됨
+    
+3. -i 옵션  
+컨테이너 쪽 쉘에 들어가서 명령 실행할 수 있는 입력이 되게끔 함  
+     
+4. -t 옵션  
+터미널 기능 활성화  
+주로 -it 옵션이 함께 자주 사용  
+     
+5. -v 옵션  
+볼륨 마운트 이용시 사용  
+    
+6. --name 옵션  
+컨테이너의 이름을 지정해줌  
+--name <이름> 옵션과 붙여서 사용  
+    
+7. --rm 옵션  
+컨테이너를  stop 시키는 동시에 삭제까지 한번에 실행
 
-예시)
+8. -e 옵션   
+Docker 컨테이너의 환경변수를 설정하기 위해서는 -e 옵션을 사용  
+또한, -e 옵션을 사용하면 Dockerfile의 ENV 설정도 덮어써지게 됨
+-e MYSQL_ROOT_PASSWORD=<password> 과 같이 사용  
+     
+예시) backend api 서버 기동
 ``` sh
 $ docker container run -it --name backend-test-docker -d -p 5050:5000 backend-test:latest
+```
+
+예시) 일회성 batch 실행
+``` sh
+# $ docker run --name {container-name} -it {image_name}:{image_tag} {command}
+$ docker run --name {container-name} -it {image_name}:latest bin/sh
+```
+    
+예시) 컨테이너 삭제
+``` sh
+$ docker rm {container-name}
 ```
 
 
@@ -145,3 +167,5 @@ $ docker container run -it --name backend-test-docker -d -p 5050:5000 backend-te
 [docker mysql 컨터에너 생성](https://poiemaweb.com/docker-mysql)  
 [mysql container에 볼륨 설정하기](https://velog.io/@june20516/mysql-dockerize2-mysql-container%EC%97%90-%EB%B3%BC%EB%A5%A8-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0)  
 [docker 이미지 빌드와 컨테이너 실행](https://conanglog.tistory.com/69)  
+[docker run 명령어 개념 & 주요 옵션 설명](https://bio-info.tistory.com/136)  
+[docker run 커맨드 사용법](https://www.daleseo.com/docker-run/)  
