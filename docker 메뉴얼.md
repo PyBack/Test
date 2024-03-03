@@ -162,6 +162,39 @@ $ docker run --name {container-name} -it {image_name}:latest bin/sh
 $ docker rm {container-name}
 ```
 
+예시) 컨테이너 재시작
+``` sh
+$ docker restart {container-name or container-id}
+```
+
+### 3-3. Docker 컨테이너 실행 중 접속
+Docker 컨테이너에 접속하는 방법은 크게 두 가지가 있는데, 주로 컨테이너 내부의 터미널 세션을 열어 직접 명령을 실행하거나 디버깅을 수행할 수 있다.
+
+#### 3-3-1. docker exec 명령어 
+
+* 이미 실행 중인 컨테이너 내에서 새로운 명령을 실행하기 위해 사용
+* 터미널 세션을 연결하지 않고, 새로운 명령을 실행한 결과만을 보여줌
+* -it 옵션을 사용하여 인터랙티브 모드와 가상 터미널을 사용할 수 있음
+* 컨테이너 터미널과는 독립적으로 동작하며, 명령 실행 후에도 컨테이너가 종료되지 않음
+
+예시)
+```sh
+docker exec -it {container-name or container-id} /bin/bash
+```
+
+#### 3-3-2. docker attach 명령어
+
+* 이미 실행 중인 컨테이너의 터미널에 현재 터미널 세션을 연결
+* 컨테이너 내부에서 실행되고 있는 프로세스의 표준 입력(stdin), 출력(stdout), 에러(stderr)를 현재 터미널에 연결
+* 컨테이너의 터미널에 종속되며, 컨테이너 터미널에서 나오면 현재 터미널 세션이 종료됨
+
+예시)
+```sh
+docker attach {container-name or container-id}
+```
+
+docker attach를 사용하면 현재 터미널 세션이 컨테이너 터미널과 연결되며, 컨테이너 터미널에서 나가려면 Ctrl + p를 누르고 Ctrl + q를 누르면 된다.
+
 
 참고 사이트:   
 [docker mysql 컨터에너 생성](https://poiemaweb.com/docker-mysql)  
@@ -169,3 +202,5 @@ $ docker rm {container-name}
 [docker 이미지 빌드와 컨테이너 실행](https://conanglog.tistory.com/69)  
 [docker run 명령어 개념 & 주요 옵션 설명](https://bio-info.tistory.com/136)  
 [docker run 커맨드 사용법](https://www.daleseo.com/docker-run/)  
+[docker container 접속하기] (https://mvje.tistory.com/166)
+
