@@ -154,7 +154,7 @@ $ docker container run -it --name backend-test-docker -d -p 5050:5000 backend-te
 예시) 일회성 batch 실행
 ``` sh
 # $ docker run --name {container-name} -it {image_name}:{image_tag} {command}
-$ docker run --name {container-name} -it {image_name}:latest bin/sh
+$ docker run --name {container-name} -it {image_name}:latest /bin/sh
 ```
     
 예시) 컨테이너 삭제
