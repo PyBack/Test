@@ -169,9 +169,10 @@ https://sgc109.github.io/2020/07/16/git-submodule/
 
 ## git log 옵션
 [alias]  <br/>
-lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all  <br/>
-lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-lg = !"git lg1"  <br/>
+git config --global alias "log --color --decorate --oneline --graph"
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset) %C(white)%s%C(reset) %C(dim white)- [%an]%C(reset)%C(bold yellow)%d%C(reset)' --date=short --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%ad%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all --date=format: '%Y-%m-%d %H:%M:%S %z' 
+lg = !'git lg1' <br/>
 ```sh
 $ git log --pretty=format:'%h %ad %s' --date=short  --graph : 해시코드 날짜 커밋내용 + 그래프
 ```
