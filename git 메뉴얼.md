@@ -24,6 +24,11 @@ $ git remote add origin remote {URL} (https://github.com/$username/$repo_name))
 $ git push -u origin master
 ```
 
+## github (원격저장소) 주소 변경하기
+```bash
+$ git remote reset-url origin {https://login-key@github.com/GitHunID/repository-name.git}
+```
+
 ## git 신규 branch remote 저장소에 push 하기
 1. Create a new branch:  
 $ git checkout -b feature_branch_name  
