@@ -214,3 +214,12 @@ can confirm that by printing on the terminal:
     name = YourName
     email = your@email.com
 ```
+
+## github token 등록 후 활성화
+이 토큰은 git으로 무슨 짓을 하면 매번 쳐줘야한다. 그게 귀찮으면 다음 명령어를 쳐준다.
+```sh
+git config --global credential.helper store
+```
+그래도 다음에 한 번은 쳐야한다. 그 후부터는 다시 토큰을 묻지 않을 거다. 일단 위 명령어는 영구저장이자 이 컴퓨터에 있는 모든 레포에 대해 적용이 되는데 지금 작업하고 있는 레포에만 적용하고 싶다면 --global을 치워버리자.
+
+영구적용 말고 일시적용을 하고 싶으면 store 대신에 cache를 적어준다. 기본은 15분이다. 여기에 추가로 시간을 변경하고 싶으면 --timeout 옵션을 변경해준다.
